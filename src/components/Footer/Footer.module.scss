@@ -1,0 +1,111 @@
+.container {
+  background: url("back_footer.png");
+  height: 622px;
+  background-origin: content-box;
+  background-position: top, center;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  & .column {
+    margin-top: 38px;
+
+    &:nth-child(2) {
+      & .icon {
+        width: 17px;
+        height: 24px;
+      }
+    }
+
+    & .icon {
+      width: 24px;
+      vertical-align: middle;
+    }
+
+    & .title {
+      color: #ffffff;
+      font-family: "Fredoka One";
+      font-size: 13px;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-left: 18px;
+    }
+
+    @mixin info() {
+      color: #ffffff;
+      font-family: Lato;
+      letter-spacing: 0.28px;
+    }
+
+    & .number {
+      @include info();
+      font-size: 12px;
+      margin-left: 42px;
+    }
+
+    & .address {
+      @include info();
+      font-size: 11px;
+      text-align: start;
+    }
+
+    & .social {
+      vertical-align: middle;
+      width: 42px;
+      margin-left: 40px;
+    }
+
+    & a {
+      font-size: 12px;
+      margin-left: 11px;
+      letter-spacing: 0.25px;
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+
+      &:hover {
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1550px) {
+  .container {
+    justify-content: start;
+
+    & .column {
+      &:nth-child(1) {
+        margin-left: 25.7%;
+      }
+
+      &:nth-child(2) {
+        margin-left: 92px;
+
+        & .icon {
+          width: 17px;
+          height: 24px;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-left: 123px;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+
+    & .column {
+      background-color: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      padding: 10px;
+    }
+  }
+}
